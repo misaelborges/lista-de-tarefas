@@ -40,13 +40,14 @@ main #label {
     margin-bottom: 5px;
 }
 
-#add {
-    margin-right: 5px;
+main input {
+    border: 1px solid #ccc;
     margin-bottom: 5px;
 }
 
-main input {
-    border: 1px solid #ccc;
+#botao:hover{
+    background-color: rgb(163, 161, 161);
+    cursor: pointer;
 }
 
 table {
@@ -67,6 +68,7 @@ button {
     height: 20px;
     border: none;
     margin: 0px 5px;
+    cursor: pointer;
 }
 
 #concluir{

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <header>
@@ -13,36 +14,26 @@
     </header>
     <main>
         <h2>Tarefas do dia a dia</h2>
-        <label for="add" id="label">Adicionar tarefa</label>
-        <input type="text" name="add" id="add">
-        <input type="button" value="Adicionar">
+        <form id="form-atividade">
+            <input type="text" name="nome" id="nome" placeholder="adicionar a atividade">
+            <input type="button" value="Adicionar" id="botao">
+        </form>
         <table>
-            <tr>
-                <th>
-                    tarefa
-                </th>
-                <th>
-                    horario
-                </th>
-                <th>
-                    Situação
-                </th>
-            </tr>
-            <!--
+            <thead>
                 <tr>
-                    <td>
-                        Tarefa
-                    </td>
-                    <td>
+                    <th>
+                        tarefa
+                    </th>
+                    <th>
                         horario
-                    </td>
-                    <td>
-                        <button id="concluir"></button>
-                        <button id="adiar"></button>
-                        <button id="excluir"></button>
-                    </td>
+                    </th>
+                    <th>
+                        Situação
+                    </th>
                 </tr>
-            -->
+            </thead>
+            <tbody id="compromisso">
+            </tbody>
         </table>
     </main>
 </body>
