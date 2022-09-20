@@ -1,4 +1,5 @@
 let botao = document.querySelector('#botao')
+let msg = 'aberto'
 
 botao.addEventListener('click', function(){
 
@@ -23,7 +24,7 @@ function listaTarefas(dados) {
     let atividade = {
         nome: dados.nome.value, 
         hora: dados.hora.value,
-        situacao: criarBotao()
+        situacao: msg
     }
     return atividade
 }
@@ -31,25 +32,26 @@ function listaTarefas(dados) {
 function criarTr(atividade) {
     let atividadeTr = document.createElement('tr')
 
-    atividadeTr.appendChild(criarTd(atividade.nome))
-    atividadeTr.appendChild(criarTd(atividade.hora))
-    atividadeTr.appendChild(criarTd(atividade.situacao))
+    atividadeTr.appendChild(criarTd(atividade.nome, 'info-nome'))
+    atividadeTr.appendChild(criarTd(atividade.hora, 'info-hora'))
+    atividadeTr.appendChild(criarTd(atividade.situacao, 'info-situacao'))
 
     return atividadeTr
 }
 
-function criarTd(dado) {
+function criarTd(dado, classe) {
     var td = document.createElement('td')
     td.textContent = dado
-
+    td.classList.add(classe)
     return td
 }
 
-function criarBotao() {
-    let botao = {
-        btnConcluir: document.createElement('input'),
-        btnAdiar: document.createElement('input'),
-        btnExcluir: document.createElement('input')
-    }
-    return botao
-}
+
+let tabela = document.querySelector('#tabela')
+tabela.addEventListener('click', function(event){
+    let alvo = event.target
+    let paiAlvo = alvo.parentNode
+    paiAlvo.style.background='#ccc'
+    paiAlvo.select()
+})
+

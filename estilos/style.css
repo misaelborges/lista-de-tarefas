@@ -43,6 +43,12 @@ main #label {
 main input {
     border: 1px solid #ccc;
     margin-bottom: 5px;
+    padding: 5px;
+    height: 15px;
+}
+
+#botao{
+    height: 27px;
 }
 
 #botao:hover{
@@ -55,6 +61,7 @@ table {
     text-align: center;
     border: 1px solid #ccc;
     border-collapse: collapse;
+    
 }
 
 table th,td {
@@ -67,7 +74,7 @@ button {
     width: 20px;
     height: 20px;
     border: none;
-    margin: 0px 5px;
+    margin: 10px 5px;
     cursor: pointer;
 }
 
@@ -81,4 +88,8 @@ button {
 
 #excluir{
     background-color: red;
+}
+
+#hora{
+    cursor: pointer;
 }
