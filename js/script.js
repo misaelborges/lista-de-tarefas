@@ -31,6 +31,7 @@ function listaTarefas(dados) {
 
 function criarTr(atividade) {
     let atividadeTr = document.createElement('tr')
+    atividadeTr.classList.add('linhas')
 
     atividadeTr.appendChild(criarTd(atividade.nome, 'info-nome'))
     atividadeTr.appendChild(criarTd(atividade.hora, 'info-hora'))
@@ -46,12 +47,30 @@ function criarTd(dado, classe) {
     return td
 }
 
+let btnConcluir = document.querySelector('#concluir')
+btnConcluir.addEventListener('click', function(){
+    let tabela = document.querySelector('#tabela')
+    tabela.addEventListener('click', function(event){
+        let alvo = event.target
+        let paiAlvo = alvo.parentNode
+        paiAlvo.style.background='green'
+        let td = document.querySelector('.info-situacao')
+        td.innerText='Tarefa Concluida'
+        paiAlvo.select()
+        
+    })
+})
 
-let tabela = document.querySelector('#tabela')
-tabela.addEventListener('click', function(event){
-    let alvo = event.target
-    let paiAlvo = alvo.parentNode
-    paiAlvo.style.background='#ccc'
-    paiAlvo.select()
+let btnAdiar= document.querySelector('#adiar')
+btnAdiar.addEventListener('click', function(){
+    let tabela = document.querySelector('#tabela')
+    tabela.addEventListener('click', function(event){
+        let alvo = event.target
+        let paiAlvo = alvo.parentNode
+        paiAlvo.style.background='yellow'
+        let td = document.querySelector('.info-situacao')
+        td.innerText='Tarefa Adiada'
+        paiAlvo.select()
+    })   
 })
 
