@@ -70,8 +70,8 @@ table th,td {
 }
 
 button {
-    border-radius: 100%;
-    width: 20px;
+    border-radius: 20px;
+    width: 100px;
     height: 20px;
     border: none;
     margin: 10px 5px;

@@ -47,6 +47,16 @@ function criarTd(dado, classe) {
     return td
 }
 
+let tabela = document.querySelector('#tabela')
+    tabela.addEventListener('click', function(event){
+        let alvo = event.target
+        let paiAlvo = alvo.parentNode
+        paiAlvo.style.background='#ccc'
+        paiAlvo.select()
+    })
+
+
+
 let btnConcluir = document.querySelector('#concluir')
 btnConcluir.addEventListener('click', function(){
     let tabela = document.querySelector('#tabela')
@@ -57,20 +67,7 @@ btnConcluir.addEventListener('click', function(){
         let td = document.querySelector('.info-situacao')
         td.innerText='Tarefa Concluida'
         paiAlvo.select()
-        
-    })
-})
-
-let btnAdiar= document.querySelector('#adiar')
-btnAdiar.addEventListener('click', function(){
-    let tabela = document.querySelector('#tabela')
-    tabela.addEventListener('click', function(event){
-        let alvo = event.target
-        let paiAlvo = alvo.parentNode
-        paiAlvo.style.background='yellow'
-        let td = document.querySelector('.info-situacao')
-        td.innerText='Tarefa Adiada'
-        paiAlvo.select()
     })   
 })
-
+    
+    
