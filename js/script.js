@@ -56,7 +56,6 @@ let tabela = document.querySelector('#tabela')
     })
 
 
-
 let btnConcluir = document.querySelector('#concluir')
 btnConcluir.addEventListener('click', function(){
     let tabela = document.querySelector('#tabela')
@@ -66,8 +65,5 @@ btnConcluir.addEventListener('click', function(){
         paiAlvo.style.background='green'
         let td = document.querySelector('.info-situacao')
         td.innerText='Tarefa Concluida'
-        paiAlvo.select()
     })   
 })
-    
-    
